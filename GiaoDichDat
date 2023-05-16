@@ -1,0 +1,40 @@
+package nguyen;
+
+import java.util.Scanner;
+
+public class GiaoDichDat  extends GiaoDich{
+	
+
+	private String loaidat;
+
+	public GiaoDichDat(String magiaodich, String ngaygiaodich, long dongia, float dientich) {
+		super(magiaodich, ngaygiaodich, dongia, dientich);
+		String loaidat = null;
+
+		
+		this.loaidat = loaidat;
+	}
+
+	
+
+	
+	public String getLoaidat() {
+		return loaidat;
+	}
+
+	public void setLoaidat(String loaidat) {
+		this.loaidat = loaidat;
+	}
+	public void nhap() {
+        super.nhap();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập loại đất : ");
+        loaidat = scanner.nextLine();
+    }
+
+	@Override
+	public String toString() {
+		return "GiaoDichDat [loaidat=" + loaidat + "]";
+	}
+	
+}
