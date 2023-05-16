@@ -1,0 +1,49 @@
+package nguyen;
+
+import java.util.Scanner;
+
+public class GiaoDichNha extends GiaoDich {
+	private String loainha,diachi;
+	private int choose;
+public GiaoDichNha(String magiaodich, String ngaygiaodich, long dongia, float dientich) {
+	super(magiaodich, ngaygiaodich, dongia, dientich);
+	this.loainha = loainha;
+	this.diachi = diachi;
+}
+public String getLoainha() {
+	return loainha;
+}
+public void setLoainha(String loainha) {
+	this.loainha = loainha;
+}
+public String getDiachi() {
+	return diachi;
+}
+public void setDiachi(String diachi) {
+	this.diachi = diachi;
+}
+public void nhap() {
+    super.nhap();
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Nhập địa chỉ: ");
+    diachi = scanner.nextLine();
+    System.out.print("Nhập loại nhà (0: cao cấp, 1: thường): ");
+    choose = scanner.nextInt();
+    switch (choose) {
+        case 0:
+            loainha = "cao cấp";
+            break;
+        case 1: 
+            loainha = "thường";
+            break;
+        default:
+            System.out.println("Chọn số không hợp lệ.");
+            break;
+    }
+}
+@Override
+public String toString() {
+	return "GiaoDichNha [loainha=" + loainha + ", diachi=" + diachi + "]";
+}
+
+}
