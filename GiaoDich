@@ -1,0 +1,58 @@
+package nguyen;
+
+import java.util.Scanner;
+
+public class GiaoDich {
+	private String magiaodich;
+	private String ngaygiaodich;
+	private long dongia;
+	private float dientich;
+	public GiaoDich(String magiaodich, String ngaygiaodich, long dongia, float dientich) {
+		super();
+		this.magiaodich = magiaodich;
+		this.ngaygiaodich = ngaygiaodich;
+		this.dongia = dongia;
+		this.dientich = dientich;
+	}
+	public String getMagiaodich() {
+		return magiaodich;
+	}
+	public void setMagiaodich(String magiaodich) {
+		this.magiaodich = magiaodich;
+	}
+	public String getNgaygiaodich() {
+		return ngaygiaodich;
+	}
+	public void setNgaygiaodich(String ngaygiaodich) {
+		this.ngaygiaodich = ngaygiaodich;
+	}
+	public long getDongia() {
+		return dongia;
+	}
+	public void setDongia(long dongia) {
+		this.dongia = dongia;
+	}
+	public float getDientich() {
+		return dientich;
+	}
+	public void setDientich(float dientich) {
+		this.dientich = dientich;
+	}
+	public void nhap() {
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập mã giao dịch: ");
+        ngaygiaodich = scanner.nextLine();
+        System.out.print("Nhập ngày giao dịch: ");
+        ngaygiaodich = scanner.nextLine();
+        System.out.print("Nhập đơn giá: ");
+        dongia = Long.parseLong(scanner.nextLine());
+        System.out.print("Nhập diện tích: ");
+        dientich = Float.parseFloat(scanner.nextLine());
+    }
+	@Override
+	public String toString() {
+		return "GiaoDich [magiaodich=" + magiaodich + ", ngaygiaodich=" + ngaygiaodich + ", dongia=" + dongia
+				+ ", dientich=" + dientich + "]";
+	}
+	
+}
